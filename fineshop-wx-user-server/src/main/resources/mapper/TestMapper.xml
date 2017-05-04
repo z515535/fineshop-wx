@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fineshop.dao.TestDao">
+    <insert id="create">
+
+    </insert>
+
+    <select id="searchTest2List" resultType="com.fineshop.entity.TestEntity">
+        SELECT * FROM test
+        <where>
+            <if test="name != null">
+                and name = #{name}
+            </if>
+        </where>
+    </select>
+</mapper>
